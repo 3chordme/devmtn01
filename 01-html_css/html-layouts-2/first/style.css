@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  background-color: lightgrey;
+}
+
+.wrapper {
+  width: 50%;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid black;
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.top3 {
+  display: flex;
+  flex-direction: row;
+}
+
+.topBox {
+  background: red;
+  flex: 1;
+  height: 100px;
+  margin: 0 10px;
+}
+
+.topBox:first-child {
+  background-color: green;
+}
+
+.topBox:nth-child(2) {
+  background-color: black;
+}
+
+.mainCont {
+  height: 300px;
+  width: 100%;
+  background: darkred;
+}
+
+.mainLeft {
+  height: 100%;
+  width: 30%
+}
