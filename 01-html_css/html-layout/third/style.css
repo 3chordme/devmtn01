@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+header {
+  height: 120px;
+  width: 100%;
+  background-color: #D8D8D8;
+}
+
+.square {
+  height: 100px;
+  width: 100px;
+  margin: 10px 0 10px 25px;
+}
+
+.blue {
+  background-color: #4A90E2;
+}
+
+main {
+  height: 250px;
+  width: 100%;
+  background-color: #fff;
+  font-size: 20px;
+  font-family: helvetica;
+}
+
+main div {
+}
+
+footer {
+  height: 120px;
+  width: 100%;
+}
+
+.bluegreen {
+  background-color: #50E3C2;
+}
+
+.lightgreen {
+  background-color: #B8E986;
+}
+
+.yellowgreen {
+  background-color: #F8E71C;
+}
