@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.column {
+  float: left;
+  width: calc(100% / 3);
+  height: 100%;
+}
+
+.left {
+  background-color: #4A90E2;
+}
+
+.middle {
+  background-color: #50E3C2;
+}
+
+.right {
+  background-color: #B8E986;
+  height: 70%;
+}
+
+.red {
+  background-color: #D0021B;
+  height: 30%;
+  text-align: center;
+  width: 100%;
+  display: table;
+}
+
+.red p {
+  font-family: helvetica;
+  font-weight: 100;
+  color: #FFF;
+  font-size: 24px;
+  /*margin: 0;*/
+  /*p has margin by default, but can't be used inside table cell*/
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/*other methods for vertical align include:
+
+LINE HEIGHT - set line-height to size of container height. works best with pixels, as 100% = 1 em.
+only works for one line of text.
+works for images if set in the parent of the image, and if bigger than the parent of the image.
+e.g.:
+
+#image-parent {
+  line-height: 200px;
+}
+
+#image-parent img {
+  vertical-align: middle;
+}
+
+FLOATER DIV - Add a floating div inside parent above child(to be centered)
+
+#parent {height: 250px;}
+
+#floater {
+    float: left;
+    height: 50%;
+    width: 100%;
+    margin-bottom: -50px;
+}
+
+#child {
+    clear: both;
+    height: 100px;
+}
+
+TRANSFORM (3 LINES)
+Works on any type. To avoid diminishing resolution, set preserve 3d to parent element.
+
+.parent-element {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.element {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+*/
