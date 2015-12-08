@@ -107,7 +107,7 @@ var numbers = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
     var result = false;
     num = getRandomArbitrary();
     array.forEach(function(elem) {
-      console.log(num, elem);
+      //console.log(num, elem);
       if (elem === num) {
         result = true;
       }
@@ -124,11 +124,11 @@ var str = 'this is my sentence';
 //Write a function called reverse that takes a given str as it's only argument and returns that string after it's been reversed
 
   //Code Here
-function reverse(str) {
-  return str.split('').reverse().join('');
-}
+  function reverse(str) {
+    return str.split('').reverse().join('');
+  }
 
-reverse("goodbye world!");
+
 //Next Problem
 
 
@@ -147,7 +147,24 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
   //Code Here
+  function removeItem(arr, item) {
+    //console.log("arr is ", arr);
+    arr.forEach(function(elem, index, array){
+      if (elem === item) {
+        //console.log("removing ", elem);
+        array.splice(index, index); //check this syntax. splice or slice?
+      }
+    });
+    //console.log("arr is " + arr);
+    return arr;
+  };
 
+  removeItem(myGroceryList, "pizza");
+
+  function addItem(arr, item) {
+    arr.unshift(item);
+    return arr;
+  };
 
 //removeItem(myGroceryList, 'chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //addItem(myGroceryList, 'Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
@@ -161,7 +178,13 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
 
   //Code Here
-
+  function maker() {
+    var arr = [];
+    for (i = 1; i <= 215; i++) {
+      arr.push(i);
+    }
+    return arr;
+  }
 
 
 //Next Problem
@@ -172,8 +195,14 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 //array after adding ten to each item in numbers. *Verify your answer is correct. --> [15, 19, 26, 29, 35, 44, 58]
 
   //Code Here
+function addTen(numbers) {
+  for (i = 0; i < numbers.length) {
+    numbers[i] = numbers[i].toNumber();//
+    numbers[i] += 10;
+  }
+}
 
-
+addTen(numbers);
 
 //Next Problem
 
@@ -193,7 +222,13 @@ for(var i = 0; i < num2; i++){
 //Write a function called 'longer' that is given arr1 and arr2 as it's only arguments. Return the array which is longest.
 
   //Code Here
-
+  function longer(arr1, arr2) {
+    if (arr1.length < arr2.length) {
+      return arr2.length;
+    } else {
+      return arr1.length;
+    }
+  }
 
 /*As a continuation of the previous problem, write another function called 'both'.
   Your 'both' function will be given two arguments, arr1 and arr2 (from the previous example)
@@ -201,6 +236,16 @@ for(var i = 0; i < num2; i++){
 */
 
   //Code Here
+  function both(arr1, arr2) {
+    arr = [];
+    for (i = 0; i < arr1.length - 1; i++) {
+      arr.push(arr1[i]);
+    }
+    for (i = 0; i < arr2.length - 1; i++){
+      arr.push(arr2[i]);
+    }
+    return arr;
+  }
 
 
 
@@ -241,12 +286,25 @@ array with those four objects. After that console.log the length of the Array an
 sure that it's equal to 4. */
 
   //Code Here
+  function roster() {
+    devMountainEmployees.push(tyler, cahlan, ryan, colt);
+    console.log(devMountainEmployees.length);
+  }
+
+  roster();
+
 
 /*Now let's say Cahlan has a mental breakdown and has to take a leave of absence to 'find himself'.
 Loop through your devMountainEmployees until you find cahlan, then remove him from the array.*/
 
   //Code Here
-
+  function breakdown() {
+    devMountainEmployees.forEach(function(elem, ind, arr) {
+      if (elem === cahlan) {
+        delete arr[ind];
+      }
+    });
+  }
 
 
 
