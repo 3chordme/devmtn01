@@ -48,7 +48,7 @@ var name = 'Tyler';
 //What is the difference between arguments and parameters?
 
   //Answer Here
-
+var answer = "Parameters are used in function declarations and function expressions as placeholders"
 
 //Next problem
 
