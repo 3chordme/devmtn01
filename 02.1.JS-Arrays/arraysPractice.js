@@ -157,14 +157,14 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
     });
     //console.log("arr is " + arr);
     return arr;
-  };
+  }
 
   removeItem(myGroceryList, "pizza");
 
   function addItem(arr, item) {
     arr.unshift(item);
     return arr;
-  };
+  }
 
 //removeItem(myGroceryList, 'chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //addItem(myGroceryList, 'Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
@@ -196,7 +196,7 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 
   //Code Here
 function addTen(numbers) {
-  for (i = 0; i < numbers.length) {
+  for (i = 0; i < numbers.length; i++) {
     numbers[i] = numbers[i].toNumber();//
     numbers[i] += 10;
   }
@@ -286,7 +286,7 @@ array with those four objects. After that console.log the length of the Array an
 sure that it's equal to 4. */
 
   //Code Here
-  function roster() {
+  function devMountainEmployeesFunc() {
     devMountainEmployees.push(tyler, cahlan, ryan, colt);
     console.log(devMountainEmployees.length);
   }
@@ -298,7 +298,7 @@ sure that it's equal to 4. */
 Loop through your devMountainEmployees until you find cahlan, then remove him from the array.*/
 
   //Code Here
-  function breakdown() {
+  function usersFunc() {
     devMountainEmployees.forEach(function(elem, ind, arr) {
       if (elem === cahlan) {
         delete arr[ind];
