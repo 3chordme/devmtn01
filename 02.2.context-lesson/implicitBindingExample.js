@@ -11,10 +11,8 @@ var person = {
   datingMin: 0,
   datingMax: 0,
   calcRange: function(){
-    /*
-      Younger= Age / 2.0 + 7.0
-      Older= (Age - 7.0) * 2
-    */
+    this.datingMin = (this.age / 2) + 7;
+    this.datingMax = (this.age - 7) * 2;
   }
 }
 
@@ -29,4 +27,4 @@ console.log(person.datingMax)
 The function should say "I'm " + name + ", How you doin' ?"*/
 
 
-/* Invoke the function on the person and then not on the person.
+/* Invoke the function on the person and then not on the person.*/
